@@ -14,7 +14,9 @@ class CreateEssenTable extends Migration
     public function up()
     {
         Schema::create('essen', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('e_id');
+            $table->float('Preis');
+            $table->string('Geschaeft');
             $table->timestamps();
         });
     }

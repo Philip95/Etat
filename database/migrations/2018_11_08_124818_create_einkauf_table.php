@@ -14,7 +14,11 @@ class CreateEinkaufTable extends Migration
     public function up()
     {
         Schema::create('einkauf', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('ek_id');
+            $table->integer('p_id');
+            $table->integer('e_id');
+            $table->integer('l_id');
+            $table->integer('a_id');
             $table->timestamps();
         });
     }

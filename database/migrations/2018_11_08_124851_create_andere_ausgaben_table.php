@@ -14,7 +14,10 @@ class CreateAndereAusgabenTable extends Migration
     public function up()
     {
         Schema::create('andere_ausgaben', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('a_id');
+            $table->string('geschaeft');
+            $table->float('preis');
+            $table->string('notiz');
             $table->timestamps();
         });
     }

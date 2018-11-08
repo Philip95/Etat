@@ -14,7 +14,10 @@ class CreateVorraeteTable extends Migration
     public function up()
     {
         Schema::create('vorraete', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('v_id');
+            $table->string('name');
+            $table->string('notiz');
+            $table->float('preis');
             $table->timestamps();
         });
     }
